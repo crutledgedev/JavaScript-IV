@@ -41,8 +41,9 @@ class Student extends Person{
         
     }
     
-        listsSubjects(){
-            console.log(favSubjects);
+        listSubjects(favSubjects){
+            return `${this.favSubjects}`;
+            
         }
 
           
@@ -64,11 +65,11 @@ class Student extends Person{
 
      }
      standUp(name, channel){
-         `${name} announces to ${channel} @channel standy times`;
+        return `${name} announces to ${channel} @channel standy times`;
 
      }
      debugsCode(name, student, subject){
-         return `${this.name} debugs ${student.name}'s code on ${subject}`;
+         return `${name} debugs ${student}'s code on ${subject}`;
      }
  }
 
@@ -97,6 +98,24 @@ class Student extends Person{
         
     
   });
+
+  const tom = new Instructor({
+    name: "Tom",
+    age: 30,
+    location: "Arizona",
+    //person   
+    
+    specialty:  "Inline-Block",
+    favLanguage: "JavaScript",
+    catchPhrase: "Passing the Boo",
+    //Instructor
+
+    gradClassName: "Web 15",
+    favInstructor:  "Britt Hemming",
+    //ProjectManager
+        
+    
+  });
   
 
   const chance = new Student({
@@ -106,12 +125,27 @@ class Student extends Person{
     //person   
     previousBackground: "DVD and Software Testing",
     classname: "Web 25",
-    favSubjects:  "HTML, CSS, Lunch"//array
+    favSubjects:  [`HTML, CSS, Lunch`],
     
  
         
     
   });
+  const elliot = new Student({
+    name: "Elliot",
+    age: 28,
+    location: "Pennsylvania",
+    //person   
+    previousBackground: "Foundry",
+    classname: "Web 24",
+    favSubjects:  [`HTML, CSS, JS`],
+    
+ 
+        
+    
+  });
+
+
  
 
   const fred = new ProjectManager({
@@ -131,9 +165,37 @@ class Student extends Person{
         
     
   });
+  const megan = new ProjectManager({
+    name: "Megan",
+    age: 31,
+    location: "Texas",
+    //person   
+    
+    specialty:  "React",
+    favLanguage: "C#",
+    catchPhrase: "Let's Code!",
+    //Instructor
+
+    gradClassName: "Web 5",
+    favInstructor:  "Can't Decide",
+    //ProjectManager
+        
+    
+  });
+
+
   console.log(fred.speak());
-  
+  console.log(tom.speak());
+  console.log(tom.grade("Chance", "CSS"));
+  console.log(fred.debugsCode("Allie", "Chance", "JavaScript"));  
   console.log(chance.speak());
-  console.log(allie.grade("John", "CSS"));
+  console.log(chance.listSubjects());
+  console.log(allie.grade("John", "JavaScript"));
   console.log(allie.demo("the dangers of over commiting to our schedule"));
   console.log(allie.speak());
+  console.log(megan.standUp("Megane", "FT-BW"));
+  console.log(elliot.speak());
+  console.log(elliot.listSubjects());
+  console.log(chance.PRAssignments("JS-IV"));
+  console.log(elliot.sprintChallenge("Applied JavaScript"));
+  //console.log(chance.listSubjects());

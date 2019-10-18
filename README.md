@@ -68,15 +68,15 @@ const fred = new Instructor({
 ```
 
 #### Person
-
-* First we need a Person class. This will be our `base-class`
+ 
+ * First we need a Person class. This will be our `base-class`
 * Person receives `name` `age` `location` all as props
 * Person receives `speak` as a method.
-* This method logs out a phrase `Hello my name is Fred, I am from Bedrock` where `name` and `location` are the object's own props
+* This method logs out a phrase `Hello my name is Fred, I am from Bedrock` where `name` and `location` are the object's own props -->
 
 #### Instructor
 
-* Now that we have a Person as our base class, we'll build our Instructor class.
+ * Now that we have a Person as our base class, we'll build our Instructor class.
 * Instructor uses the same attributes that have been set up by Person
 * Instructor has the following unique props:
   * `specialty` what the Instructor is good at i.e. 'redux'
@@ -84,12 +84,12 @@ const fred = new Instructor({
   * `catchPhrase` i.e. `Don't forget the homies`
 * Instructor has the following methods:
   * `demo` receives a `subject` string as an argument and logs out the phrase 'Today we are learning about {subject}' where subject is the param passed in.
-  * `grade` receives a `student` object and a `subject` string as arguments and logs out '{student.name} receives a perfect score on {subject}'
-
+  * `grade` receives a `student` object and a `subject` string as arguments and logs out '{student.name} receives a perfect score on {subject}' -->
+< 
 #### Student
 
 * Now we need some students!
-* Student uses the same attributes that have been set up by Person
+* Stude Stunt uses the same attributes that have been set up by Person
 * Student has the following unique props:
   * `previousBackground` i.e. what the Student used to do before Lambda School
   * `className` i.e. CS132
@@ -97,7 +97,7 @@ const fred = new Instructor({
 * Student has the following methods:
   * `listsSubjects` a method that logs out all of the student's favoriteSubjects one by one.
   * `PRAssignment` a method that receives a subject as an argument and logs out that the `student.name has submitted a PR for {subject}`
-  * `sprintChallenge` similar to PRAssignment but logs out `student.name has begun sprint challenge on {subject}`
+  * `sprintChallenge` similar to PRAssignment but logs out `student.name has begun sprint challenge on {subject}` --> -->
 
 #### Project Manager
 
